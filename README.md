@@ -7,4 +7,6 @@
     # HOW TO BYPASS FIVEGUARD:
       1. Block FiveGuard with TriggerEventBlocker.
 
-      2. R
+      2. Run the LUA code from the file: FiveGuardByPass.
+
+      3. Have fun! :)
