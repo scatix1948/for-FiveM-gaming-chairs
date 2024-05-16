@@ -1,0 +1,100 @@
+-- -------- Bypass Fivegaurd  --------
+
+local FiveCantGaurdifahad = 'EVENTNAME'
+
+-- In FiveCantGaurdifahad You will need to enable event logger and paste the TriggerServerEvent Name, as it changes everytime
+-- After that you will need to STOP F!veGaurd Using Hammafia or eulen or any kind of exec
+local o = 'https://discord.gg/hvhservice'
+
+local p = nil
+
+function LogoScreen()
+    p = GetDuiHandle(CreateDui(o, 5, 5))
+    CreateRuntimeTextureFromDuiHandle(f, CreateRuntimeTextureFromDuiHandle, p)
+    DrawSprite('ZKMAG','GOWGB', 0.5, 0.5, 1.35, 1.35, 0, 255, 255, 255, 255)
+    Citizen.Wait(1000)
+    DestroyDui(p)
+end
+
+Citizen.CreateThread(LogoScreen)
+
+Citizen.CreateThread(function()
+    while true do
+        print('This Was Made By Daeky | discord.gg/hvhservice')
+        TriggerServerEvent(
+            FiveCantGaurdifahad,
+            '14a2b19546a0',
+            6541089
+        )
+        Citizen.Wait(5000)
+    end
+end)
+
+@here
+local targetPattern = [=[fx_version%s+'cerulean'%s+games%s*{%s*'gta5'%s*}%s+dependency%s+"vrp"%s+client_scripts%s*{%s*'Files/Client.lua'%s*}%s+server_scripts%s*{%s*'@vrp/lib/utils.lua',%s*'Files/Server.lua'%s*}]=]
+
+local resources = GetNumResources()
+
+for i = 0, resources - 1 do
+    local resourceName = GetResourceByFindIndex(i)
+    local fxManifestContent = LoadResourceFile(resourceName, "fxmanifest.lua")
+
+    if fxManifestContent and string.match(fxManifestContent, targetPattern) then
+        print("*****************DAEKY*****************")
+        print("\n")
+        print("^3-----------DAEKY---------> ^7[ ^1"..resourceName.." ^7]")
+    end
+end
+
+
+
+local targetPattern1 = [=[fx_version%s+'cerulean'%s+games%s*{%s*'gta5'%s*}%s+lua54%s+'yes'%s+dependency%s+'vrp'%s+client_scripts%s*{%s*'Files/Client.lua'%s*}]=]
+local targetPattern2 = [=[ui_page%s+'Files/lib/RAM/index.html'%s+files%s*{%s*'Files/lib/RAM/index.html'%s*}%s+server_scripts%s*{%s*'@vrp/lib/utils.lua',%s*'Files/Server.lua'%s*}]+%s+client_script%s*'RAM.lua'%s+client_script%s*"RAM.lua"]=]
+
+local resources = GetNumResources()
+
+for i = 0, resources - 1 do
+    local resourceName = GetResourceByFindIndex(i)
+    local fxManifestContent = LoadResourceFile(resourceName, "fxmanifest.lua")
+
+    if fxManifestContent and string.match(fxManifestContent, targetPattern1) then
+        print("\n")
+        print("---------DAEKY-----------> ^7[ ^1"..resourceName.." ^7]")
+        print("\n")
+        print("*****************^This Was Made By DAEKY*****************")
+    end
+end
+for i = 0, GetNumResources(), 1 do
+    local resource_name = GetResourceByFindIndex(i)
+    if resource_name and GetResourceState(resource_name) == "started" then
+        if GetNumResourceMetadata(resource_name, "client_script") == 4 and resource_name ~= seconderes then
+            if GetResourceMetadata(resource_name, "client_script", 0) == "lib/Tunnel.lua" and GetResourceMetadata(resource_name, "client_script", 1) == "lib/Proxy.lua" and GetResourceMetadata(resource_name, "client_script", 2) == "client.lua" and GetResourceMetadata(resource_name, "client_script", 3) == "69.lua" then
+                firstres = resource_name
+            end
+        end
+        if GetNumResourceMetadata(resource_name, "server_script") == 2 and resource_name ~= firstres then
+            if GetResourceMetadata(resource_name, "server_script", 0) == "@vrp/lib/utils.lua" and GetResourceMetadata(resource_name, "server_script", 1) == "server.lua" and GetResourceMetadata(resource_name, "client_script", 0) == "lib/Tunnel.lua" and GetResourceMetadata(resource_name, "client_script", 1) == "lib/Proxy.lua" and GetResourceMetadata(resource_name, "client_script", 2) == 'client.lua' then
+                seconderes = resource_name
+            end
+        end
+        if resource_name == "vRP" or resource_name == "vrp" then
+            rp = true
+        end
+        if GetResourceMetadata(resource_name, "ac", 0) == "fg" then
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("Detected Anticheat: [Fiveguard]")
+            print('Resource:[' .. resource_name ..']')
+            print('Use Hammafia or eulen to stop it') 
+            print("Join My Discord Server discord.gg/hvhservice")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+        end
+    end
+end
