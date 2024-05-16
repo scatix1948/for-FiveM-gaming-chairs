@@ -5,8 +5,8 @@
  2. If you pay attention to the names of the files that say FiveEye, for example, it makes a lot of sense that this only works with the AntiCheat FiveGuard!
 
     # HOW TO BYPASS FIVEGUARD:
-      1. Block FiveGuard with TriggerEventBlocker.
+      I. Block FiveGuard with TriggerEventBlocker.
 
-      2. Run the LUA code from the file: FiveGuardByPass.
+      II. Run the LUA code from the file: FiveGuardByPass.
 
-      3. Have fun! :)
+      III. Have fun! :)
